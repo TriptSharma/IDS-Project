@@ -76,12 +76,13 @@ if __name__ == "__main__":
 					final.append(rid)
 					final.append(getTimeStamp("1/1/2018", "1/1/2019", bias, influence))
 					final.append(ele)                    
-					print(final)
+					#print(final)
 				all_q.append(final)
+				final=[]
 
 					
 
 
 
 	random.shuffle(final)
-	print(final)
+	print(all_q)

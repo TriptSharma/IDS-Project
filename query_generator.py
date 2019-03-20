@@ -75,10 +75,10 @@ if __name__ == "__main__":
 					final.append(uid)
 					final.append(rid)
 					final.append(getTimeStamp("1/1/2018", "1/1/2019", bias, influence))
-					final.append(ele)                    
-					#print(final)
-				all_q.append(final)
-				final=[]
+					final.append(ele)
+					#print(ele, final, '\n')
+					all_q.append(final)
+					final=[]
 
 					
 

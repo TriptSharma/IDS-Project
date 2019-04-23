@@ -1,0 +1,13 @@
+THe schema followed for data generation is as follows:
+
+Assuming 4:1 ratio for role queries to user queries
+
+NO_ROLES = 5
+NO_USER_PER_ROLE = 5
+NO_TABLES = 5
+NO_ATTRIB_PER_TABLE = [5,6,7,8,9,10]
+TABLE_ACCESS_PERMISSION = [[0,1,2],[2,3,4],[0,1,2,3,4],[0,2,4],[0,2,3,4]] //For each role it tells which tables can be accessed by it
+NO_TRANSACTION_PER_USER = 5x5 Matrix
+ROLE_SEQ_LEN = [5,6,7,4,5] //The common sequence which will be repeated at role level
+USER_SEQ_LEN = 5x5 matrix //The sequence which will be repeated at user level
+

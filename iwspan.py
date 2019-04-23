@@ -7,7 +7,6 @@ def is_subseq(x, y):
     it = iter(y)
     return all(any(c == ch for c in it) for ch in x)
 
-
 def wspan(sequences,weight):
 	tsmw = 0
 	smw = {}

@@ -1,13 +1,24 @@
 from master import pure_queries
 from Noiseadd import addNoise
 import pickle
+import os
 
-pure = pure_queries()
-final_data = addNoise(1000,pure)
+def dumpQueries(path,num):
+    pure = pure_queries()
+    final_data = addNoise(num,pure)
+    with open(path+"/simulated_queries.obj","wb+") as ofile:
+        pickle.dump(final_data,ofile)
 
-with open("simulated_queries.obj","wb+") as ofile:
-    pickle.dump(final_data,ofile)
+def makeFolders():
+    queries = [1000,2000,3000,4000,5000] #these are queries per user for each role
+    for elem in queries:
+        print(os.getcwd())
+        os.system("mkdir "+str(elem))
+        dumpQueries(str(elem),elem)
 
+
+if __name__ == '__main__':
+    makeFolders()
 '''
 format for each entry in the data:
 1st -> role_id
